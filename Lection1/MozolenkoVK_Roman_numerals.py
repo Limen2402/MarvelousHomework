@@ -19,9 +19,38 @@ def roman_to_decimal(rom):
 
 ##################################################
 
+def decimal_to_roman(dec):
+    
+    rom = 'M' * (dec // 1000)
+    dec %= 1000
+    rom += 'D' * (dec // 500)
+    dec %= 500
+    rom += 'C' * (dec // 100)
+    dec %= 100
+    rom += 'L' * (dec // 50)
+    dec %= 50
+    rom += 'X' * (dec // 10)
+    dec %= 10
+    rom += 'V' * (dec // 5)
+    dec %= 5
+    rom += 'I' * dec
 
-test_pairs = [("IX", 9), ("XI", 11), ("MCCII", 1202), ("MMXVIII", 2018), ("XLIX", 49), ("LXXXIX", 89), ("XCIX", 99)]
+    # Да, я зделал это настолько нагло и прямо. Но, тем не менее, самая древняя версия римских чисел так и работает
+
+    return rom
+
+##################################################
+
+test_pairs = [("IX", 9), ("XI", 11), ("MCCII", 1202), ("MMXVIII", 2018), ("XLIX", 49), ("LXXXIX", 89), ("XCIX", 99), ("M", 1000)]
+
+#проверка первой части
 
 for rom, dec in test_pairs:
     converted = roman_to_decimal(rom)
+    print(converted == dec)
+
+#проверка второй части (довольно хитрая, нужно сказать)
+
+for rom, dec in test_pairs:
+    converted = roman_to_decimal(decimal_to_roman(dec))
     print(converted == dec)
