@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>75315497-b865-442a-8315-4c54370aa5d9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MozolenkoVK_Roman_numerals.py</StartupFile>
+    <StartupFile>MozolenkoVK_generate_SAW_exercise1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,8 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Lection1.py" />
+    <Compile Include="MozolenkoVK_generate_SAW_exercise1.py" />
     <Compile Include="MozolenkoVK_Roman_numerals.py" />
-    <Compile Include="SAW.py">
+    <Compile Include="MozolenkoVK_generate_SAW_exercise0.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
