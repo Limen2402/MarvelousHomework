@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>75315497-b865-442a-8315-4c54370aa5d9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lection1.py</StartupFile>
+    <StartupFile>MozolenkoVK_Roman_numerals.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Lection1.py" />
+    <Compile Include="MozolenkoVK_Roman_numerals.py" />
+    <Compile Include="SAW.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
