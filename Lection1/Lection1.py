@@ -24,18 +24,3 @@
 #generate_walk([(0,0)], 1)
 #
 
-av_phys = 0
-av_math = 0
-av_rus = 0
-n = 0
-
-with open('dataset_3363_3.txt') as input:
-    for line in input:
-        n += 1
-        x = line.split(';')
-        av_math += int(x[1])
-        av_phys += int(x[2])
-        av_rus += int(x[3])
-        print((int(x[1]) + int(x[2]) + int(x[3])) / 3)
-print(av_math / n, av_phys / n, av_rus / n)
-
