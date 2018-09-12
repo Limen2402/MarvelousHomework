@@ -21,22 +21,15 @@ def roman_to_decimal(rom):
 
 def decimal_to_roman(dec):
     
-    rom = 'M' * (dec // 1000)
-    dec %= 1000
-    rom += 'D' * (dec // 500)
-    dec %= 500
-    rom += 'C' * (dec // 100)
-    dec %= 100
-    rom += 'L' * (dec // 50)
-    dec %= 50
-    rom += 'X' * (dec // 10)
-    dec %= 10
-    rom += 'V' * (dec // 5)
-    dec %= 5
-    rom += 'I' * dec
+    s = ''
+    dict = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'} 
+    # все исключения стырил с википедии
 
-    # Да, я сделал это настолько нагло и прямо. Но, тем не менее, самая древняя версия римских чисел так и работает
-
+    for i in dict.keys():
+        k = dec // i
+        dec %= i
+        s += dict[i] * k
+    
     return rom
 
 ##################################################
@@ -49,8 +42,8 @@ for rom, dec in test_pairs:
     converted = roman_to_decimal(rom)
     print(converted == dec)
 
-#проверка второй части (довольно хитрая, нужно сказать)
+#проверка второй части
 
 for rom, dec in test_pairs:
-    converted = roman_to_decimal(decimal_to_roman(dec))
-    print(converted == dec)
+    converted = decimal_to_roman(dec)
+    print(converted == rom)

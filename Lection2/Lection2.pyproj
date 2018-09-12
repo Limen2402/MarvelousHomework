@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a5b64b08-4c0e-42b8-9cfd-726aa3b35ab1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lection2.py</StartupFile>
+    <StartupFile>MozolenkoVK_quadratic_exercise.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Lection2.py" />
+    <Compile Include="MozolenkoVK_quadratic_exercise.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
