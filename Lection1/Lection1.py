@@ -22,4 +22,3 @@
 #            generate_walk(pp, L-1)
 #
 #generate_walk([(0,0)], 1)
-#
