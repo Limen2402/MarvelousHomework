@@ -1,0 +1,154 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Пусть дана гладкая функция 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, чья производная не обращается в ноль в некоторой области.
+ Пусть 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ из этой области таково, что 
+\begin_inset Formula $f(x^{*})=0$
+\end_inset
+
+.
+ Пусть метод Ньютона сходится: 
+\begin_inset Formula $x_{n+1}=x_{n}-\frac{f(x_{n})}{f^{\prime}(x_{n})}$
+\end_inset
+
+ и 
+\begin_inset Formula $x_{n}\rightarrow x^{*}$
+\end_inset
+
+.
+ Покажем, что тогда он сходится квадратично.
+\end_layout
+
+\begin_layout Standard
+Для этого разложим 
+\begin_inset Formula $f$
+\end_inset
+
+ в ряд Тейлора в окрестности 
+\begin_inset Formula $x^{*}:$
+\end_inset
+
+ 
+\begin_inset Formula $f(x^{*}+\epsilon)=0+f^{\prime}(x^{*})\epsilon+\frac{1}{2}f^{\prime\prime}(x^{*})\epsilon^{2}+O(\epsilon^{3})$
+\end_inset
+
+.
+ Тогда 
+\begin_inset Formula 
+\begin{align*}
+\frac{f(x^{*}+\epsilon)}{f^{\prime}(x^{*}+\epsilon)} & =\frac{f^{\prime}(x^{*})\epsilon+\frac{1}{2}f^{\prime\prime}(x^{*})\epsilon^{2}+O(\epsilon^{3})}{f^{\prime}(x^{*})+f^{\prime\prime}(x^{*})\epsilon+O(\epsilon^{2})}=\epsilon\times\left(1-\frac{\frac{1}{2}f^{\prime\prime}(x^{*})\epsilon+O(\epsilon^{2})}{f^{\prime}(x^{*})+f^{\prime\prime}(x^{*})\epsilon+O(\epsilon^{2})}\right)\\
+ & =\epsilon+O(\epsilon^{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+То есть, если 
+\begin_inset Formula $x_{n}=x^{*}+\epsilon_{n}$
+\end_inset
+
+ мы получаем
+\begin_inset Formula 
+\[
+x^{*}+\epsilon_{n+1}=x^{*}+\epsilon_{n}-\epsilon_{n}+O(\epsilon_{n}^{2})
+\]
+
+\end_inset
+
+или 
+\begin_inset Formula 
+\[
+\epsilon_{n+1}=O(\epsilon_{n}^{2})
+\]
+
+\end_inset
+
+то есть, каждое следующее отклонение как минимум квадратично по предыдущему
+ - ч.т.д.
+ 
+\end_layout
+
+\end_body
+\end_document
