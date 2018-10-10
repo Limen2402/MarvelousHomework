@@ -89,7 +89,7 @@ plt.loglog(hh, [abs(y_true - f_right_2(x_0, h)) for h in hh], 'o--', label = 'ad
 plt.loglog(hh, [abs(y_true - f_right_3(x_0, h)) for h in hh], 'o--', label = 'advanced+ O(h^3)', color = 'y')
 
 
-plt.title('f\' for f = x^2 ln(x) in x_0 = 0.0001')
+plt.title('f\' pressision for f = x^2 ln(x) in x_0 = 0.0001')
 plt.xlabel('step')
 plt.ylabel('pressision')
 plt.grid()
