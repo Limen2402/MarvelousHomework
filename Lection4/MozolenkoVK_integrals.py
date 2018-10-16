@@ -11,11 +11,13 @@ b = 1.0
 
 def f(x):
     """any function"""
-    return 4 * x ** 3
+    #return 4 * x ** 3
+    return 0.5 * x ** (-0.5)
 
 def cheat_int(a, b):
     """for f(x) = 4x^3"""
-    return b ** 4 - a ** 4
+    #return b ** 4 - a ** 4
+    return b ** 0.5 - a ** 0.5
 
 def classical_int(f, a, b, N):
     """ simple sum """
@@ -43,6 +45,13 @@ heapq.heapify(heap)
 
 #теперь: прогоняем алгоритм все разы, и если номер шага внезапно нужный - выписываем ответ в zz
 for i in range(N_start, N_start * 2 ** N_log_range):  
+
+    if i in hh:
+        S = 0
+        for k in heap:
+            S += -k[0]
+        zz.append(abs(S - cheat_int(a, b)))
+
     p = heapq.heappop(heap)
     a1 = p[1]
     b1 = p[2]
@@ -51,15 +60,10 @@ for i in range(N_start, N_start * 2 ** N_log_range):
     heapq.heappush(heap, p1)
     heapq.heappush(heap, p2)
 
-    if i in hh:
-        S = 0
-        for k in heap:
-            S += -k[0]
-        zz.append(abs(S - cheat_int(a, b)))
 
 plt.loglog(hh, zz, 'o--', label = 'adapt', color = 'r')
 
 plt.legend()
 plt.show()
 
-#работает оно как-то странно. Очень слабо. 
+#работает оно как-то странно. Очень слабо. Upd: все хорошо работает
