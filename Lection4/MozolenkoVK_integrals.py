@@ -5,7 +5,7 @@ import heapq, matplotlib.pyplot as plt
 # ошибки для стандартного способа
 
 N_start = 2
-N_log_range = 10
+N_log_range = 15
 a = 0.0
 b = 1.0
 
@@ -56,7 +56,6 @@ for i in range(N_start, N_start * 2 ** N_log_range):
         for k in heap:
             S += -k[0]
         zz.append(abs(S - cheat_int(a, b)))
-
 
 plt.loglog(hh, zz, 'o--', label = 'adapt', color = 'r')
 
