@@ -31,4 +31,27 @@ for i in range(len(position_x)):
         sum += weight_x[i] * weight_y[j] * f(position_x[i], position_y[j]) * position_x[i]
 print(sum)
 
-#3.
+#5.
+
+import sobol_seq
+def f(x, y):
+    return math.exp(-(x * x + y * y))
+answer = 0.25 * math.pi * sp.erf(1) ** 2
+n = 2000
+arr = sobol_seq.i4_sobol_generate(2, n)
+x = arr[:, 0]
+y = arr[:, 1]
+sum = 0 
+plot_x = []
+plot_y = []
+for i in range(n):
+    sum += f(x[i], y[i])
+    plot_x.append(i)
+    plot_y.append(abs(sum / n - answer))
+plt.xlabel('number of points')
+plt.ylabel('precision')
+plt.title('sobol_seq_precision')
+plt.plot(plot_x, plot_y, 'o')
+plt.grid()
+plt.show()
+print(sum / n, int.dblquad(f, 0, 1, 0, 1), answer)
