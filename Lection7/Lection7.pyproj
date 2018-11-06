@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>75315497-b865-442a-8315-4c54370aa5d9</ProjectGuid>
+    <ProjectGuid>41214c9c-e925-47cc-b4cf-d7998dc70d31</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lection1.py</StartupFile>
+    <StartupFile>Lection7.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Lection1</Name>
-    <RootNamespace>Lection1</RootNamespace>
+    <Name>Lection7</Name>
+    <RootNamespace>Lection7</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,12 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Lection1.py" />
-    <Compile Include="MozolenkoVK_generate_SAW_exercise1.py" />
-    <Compile Include="MozolenkoVK_Roman_numerals.py" />
-    <Compile Include="MozolenkoVK_generate_SAW_exercise0.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Lection7.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

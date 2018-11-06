@@ -1,7 +1,7 @@
 #cProfile
 import math, numpy as np, matplotlib.pyplot as plt, scipy.special as sp,scipy.integrate as int
 
-def f(x, y):
+def f(x, y): 
     return math.sin(10 * x) * math.sin(y)
 
 #thanks, symmetries
